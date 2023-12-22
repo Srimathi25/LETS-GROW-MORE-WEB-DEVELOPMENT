@@ -1,7 +1,7 @@
 var form = document.querySelector("#userForm");
 const allUsersData = [];
 
-// ------------------function to reset the form------------------
+
 const resetForm = function () {
   form.classList.remove('was-validated')
   const name = document.getElementById('name');
@@ -26,8 +26,6 @@ const resetForm = function () {
     rb.checked = false;
   }
 };
-
-// --------------------function to get the data of the form----------------------
 
 const getData = function () {
   const name = document.getElementById('name').value;
@@ -54,7 +52,7 @@ const getData = function () {
   return { name, email, website, image, gender, skills };
 };
 
-//-----------------------adding event listner to the "enroll student" button with type submit to submit the form
+
 
 form.addEventListener("submit", function (event) {
   event.preventDefault();
@@ -71,7 +69,7 @@ form.addEventListener("submit", function (event) {
   removeSpan();
 });
 
-// --------------function to remove the span tag ("fill the form to enroll the students")
+
 
 function removeSpan() {
   var span = document.getElementById("span");
@@ -81,7 +79,7 @@ function removeSpan() {
   
 };
 
-// ------------------function to print the form data in the right side of div by genrating html elments inside the div.
+
 
 function printResult(data) {
   const resultEl = document.getElementById('enrolled-students');
@@ -169,4 +167,3 @@ function printResult(data) {
 
 };
 
-// The end------------------
